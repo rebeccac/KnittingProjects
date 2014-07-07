@@ -12,9 +12,12 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     var myList:Array<AnyObject> = []
     
+    
     @IBOutlet var tableView: UITableView
     override func viewDidLoad() {
         super.viewDidLoad()
+        tableView.backgroundColor = UIColor(red: 19.0/255.0, green: 100.0/255.0, blue: 128.0/255.0, alpha: 1.0)
+        
         
     }
     
@@ -90,10 +93,24 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         
         var cell: UITableViewCell = tableView?.dequeueReusableCellWithIdentifier(CellID) as UITableViewCell
         
+        //cell.backgroundColor = UIColor.darkGrayColor()
+        cell.textColor = UIColor.whiteColor()
+        
+        
         if let ip = indexPath {
             var data: NSManagedObject = myList[ip.row] as NSManagedObject
             var projectName: String = data.valueForKey("name") as String
             var projectNumber: Int = ip.row + 1
+            
+            
+            if ip.row % 2 == 0 {
+                cell.backgroundColor = UIColor(red: 18.0/255.0, green: 120.0/255.0, blue: 153.0/255.0, alpha: 1.0)
+            } else {
+                cell.backgroundColor = UIColor(red: 26.0/255.0, green: 139.0/255.0, blue: 179.0/255.0, alpha: 1.0)
+            }
+            
+            
+            
             cell.textLabel.text = "Project \(projectNumber): \(projectName)"
         }
         
