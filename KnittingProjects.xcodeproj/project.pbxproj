@@ -13,6 +13,8 @@
 		A1505346196A2CC500BEC759 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A1505344196A2CC500BEC759 /* Main.storyboard */; };
 		A1505348196A2CC500BEC759 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A1505347196A2CC500BEC759 /* Images.xcassets */; };
 		A1505354196A2CC500BEC759 /* KnittingProjectsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1505353196A2CC500BEC759 /* KnittingProjectsTests.swift */; };
+		A150535E196A2D5100BEC759 /* ProjectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A150535D196A2D5100BEC759 /* ProjectViewController.swift */; };
+		A19BC925196A678800DC1F8E /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = A19BC924196A678800DC1F8E /* Model.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +38,8 @@
 		A150534D196A2CC500BEC759 /* KnittingProjectsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KnittingProjectsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1505352196A2CC500BEC759 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A1505353196A2CC500BEC759 /* KnittingProjectsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KnittingProjectsTests.swift; sourceTree = "<group>"; };
+		A150535D196A2D5100BEC759 /* ProjectViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectViewController.swift; sourceTree = "<group>"; };
+		A19BC924196A678800DC1F8E /* Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,10 +83,12 @@
 			children = (
 				A150533D196A2CC500BEC759 /* AppDelegate.swift */,
 				A1505342196A2CC500BEC759 /* ViewController.swift */,
+				A150535D196A2D5100BEC759 /* ProjectViewController.swift */,
 				A1505344196A2CC500BEC759 /* Main.storyboard */,
 				A1505347196A2CC500BEC759 /* Images.xcassets */,
 				A150533F196A2CC500BEC759 /* KnittingProjects.xcdatamodeld */,
 				A150533B196A2CC500BEC759 /* Supporting Files */,
+				A19BC924196A678800DC1F8E /* Model.swift */,
 			);
 			path = KnittingProjects;
 			sourceTree = "<group>";
@@ -211,6 +217,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A19BC925196A678800DC1F8E /* Model.swift in Sources */,
+				A150535E196A2D5100BEC759 /* ProjectViewController.swift in Sources */,
 				A1505343196A2CC500BEC759 /* ViewController.swift in Sources */,
 				A150533E196A2CC500BEC759 /* AppDelegate.swift in Sources */,
 				A1505341196A2CC500BEC759 /* KnittingProjects.xcdatamodeld in Sources */,
@@ -330,6 +338,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = KnittingProjects/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -341,6 +350,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = KnittingProjects/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -401,6 +411,7 @@
 				A1505359196A2CC500BEC759 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A150535A196A2CC500BEC759 /* Build configuration list for PBXNativeTarget "KnittingProjectsTests" */ = {
 			isa = XCConfigurationList;
@@ -409,6 +420,7 @@
 				A150535C196A2CC500BEC759 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
