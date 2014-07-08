@@ -16,8 +16,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: NSDictionary?) -> Bool {
-        // Override point for customization after application launch.
+        
+        configureAppearance()
         return true
+    }
+    
+    func configureAppearance() -> Void {
+        
+        // Navigation Bar background colour
+        UINavigationBar.appearance().barTintColor = UIColor .whiteColor()//OPTIONAL SAME RESULTS: (red:1, green:0.502, blue:0, alpha:1)
+        
+        UINavigationBar.appearance().tintColor = UIColor.darkGrayColor()
+        
+        // Heading text colour
+        UINavigationBar.appearance().titleTextAttributes = [NSFontAttributeName:UIFont.preferredFontForTextStyle(UIFontTextStyleHeadline),NSForegroundColorAttributeName: UIColor.darkGrayColor()];
+        
     }
 
     func applicationWillResignActive(application: UIApplication) {

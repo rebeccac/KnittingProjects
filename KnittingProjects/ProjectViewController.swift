@@ -97,6 +97,18 @@ class ProjectViewController: UIViewController {
         }
     }
    
+    @IBAction func resetCounterPressed(sender: AnyObject) {
+        counter = 0
+        counterLabel.text = "\(counter)"
+        let context = getContext()
+        let entity = getEntity(context)
+        
+        // save counter's value to DB
+        if existingItem {
+            existingItem.setValue(counter as Int, forKey: "counter")
+        }
+        
+    }
     func textView(_textView: UITextView!, shouldChangeTextInRange range: NSRange, replacementText text: String!) -> Bool {
             
             // If Return (Done) key is pressed, resign keyboard & save notes
@@ -116,6 +128,9 @@ class ProjectViewController: UIViewController {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
+        // Set UITextView's border
+        notesTextField.layer.borderColor = UIColor.lightGrayColor().CGColor
+        notesTextField.layer.borderWidth = 1.0
         
         if existingItem {
             projectNameLabel.text = name
@@ -128,6 +143,8 @@ class ProjectViewController: UIViewController {
             alert.addButtonWithTitle("Save")
             alert.alertViewStyle = UIAlertViewStyle.PlainTextInput
             input = alert.textFieldAtIndex(0)
+            // Set auto-capitalisation of input field - each word capitalised
+            input.autocapitalizationType = UITextAutocapitalizationType.Words
             input.placeholder = "Enter project's name"
             alert.show()
         }

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A10D4F82196BADCC00CCAB2F /* YarnConversionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10D4F81196BADCC00CCAB2F /* YarnConversionViewController.swift */; };
 		A150533E196A2CC500BEC759 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A150533D196A2CC500BEC759 /* AppDelegate.swift */; };
 		A1505341196A2CC500BEC759 /* KnittingProjects.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A150533F196A2CC500BEC759 /* KnittingProjects.xcdatamodeld */; };
 		A1505343196A2CC500BEC759 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1505342196A2CC500BEC759 /* ViewController.swift */; };
@@ -28,6 +29,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A10D4F81196BADCC00CCAB2F /* YarnConversionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YarnConversionViewController.swift; sourceTree = "<group>"; };
 		A1505338196A2CC500BEC759 /* KnittingProjects.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KnittingProjects.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A150533C196A2CC500BEC759 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A150533D196A2CC500BEC759 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -84,6 +86,7 @@
 				A150533D196A2CC500BEC759 /* AppDelegate.swift */,
 				A1505342196A2CC500BEC759 /* ViewController.swift */,
 				A150535D196A2D5100BEC759 /* ProjectViewController.swift */,
+				A10D4F81196BADCC00CCAB2F /* YarnConversionViewController.swift */,
 				A1505344196A2CC500BEC759 /* Main.storyboard */,
 				A1505347196A2CC500BEC759 /* Images.xcassets */,
 				A150533F196A2CC500BEC759 /* KnittingProjects.xcdatamodeld */,
@@ -217,6 +220,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A10D4F82196BADCC00CCAB2F /* YarnConversionViewController.swift in Sources */,
 				A19BC925196A678800DC1F8E /* Model.swift in Sources */,
 				A150535E196A2D5100BEC759 /* ProjectViewController.swift in Sources */,
 				A1505343196A2CC500BEC759 /* ViewController.swift in Sources */,

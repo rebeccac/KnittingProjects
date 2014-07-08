@@ -5,7 +5,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6153.13"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--View Controller - Row Counter-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
                 <viewController automaticallyAdjustsScrollViewInsets="NO" id="vXZ-lx-hvc" customClass="ViewController" customModule="KnittingProjects" customModuleProvider="target" sceneMemberID="viewController">
@@ -22,10 +22,21 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" ambiguous="YES" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" id="tDn-iN-h3n">
+                                    <tableViewCell contentMode="scaleToFill" ambiguous="YES" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" textLabel="U6c-I1-tgX" style="IBUITableViewCellStyleDefault" id="tDn-iN-h3n">
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="tDn-iN-h3n" id="8P8-NG-wwv">
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="U6c-I1-tgX">
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                    <variation key="heightClass=regular-widthClass=compact">
+                                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    </variation>
+                                                </label>
+                                            </subviews>
                                         </tableViewCellContentView>
                                         <connections>
                                             <segue destination="RTx-bF-qUv" kind="show" identifier="project" id="b0X-09-luv"/>
@@ -50,8 +61,21 @@
                                     <rect key="frame" x="20" y="276" width="280" height="40"/>
                                 </variation>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yEZ-su-YgP">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="Yarn Conversion">
+                                    <color key="titleColor" red="0.46251890400000001" green="0.47401984800000002" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="20" y="105" width="280" height="30"/>
+                                </variation>
+                                <connections>
+                                    <segue destination="GXy-Pi-nGK" kind="show" identifier="showyarnconversion" id="Abc-bd-nBG"/>
+                                </connections>
+                            </button>
                         </subviews>
-                        <color key="backgroundColor" red="0.074509803921568626" green="0.39215686274509803" blue="0.50196078431372548" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="cyP-jo-pax" firstAttribute="top" secondItem="X1a-eD-Ufb" secondAttribute="bottom" constant="20" id="Zyj-M5-6lV"/>
                             <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="cyP-jo-pax" secondAttribute="bottom" id="bvZ-pk-a1b"/>
@@ -61,6 +85,7 @@
                             <mask key="subviews">
                                 <exclude reference="cyP-jo-pax"/>
                                 <exclude reference="X1a-eD-Ufb"/>
+                                <exclude reference="yEZ-su-YgP"/>
                             </mask>
                             <mask key="constraints">
                                 <exclude reference="Zyj-M5-6lV"/>
@@ -71,6 +96,7 @@
                             <mask key="subviews">
                                 <include reference="cyP-jo-pax"/>
                                 <include reference="X1a-eD-Ufb"/>
+                                <include reference="yEZ-su-YgP"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
@@ -80,7 +106,8 @@
                             </mask>
                         </variation>
                     </view>
-                    <navigationItem key="navigationItem" id="B31-yz-a0U">
+                    <navigationItem key="navigationItem" title="Row Counter" id="B31-yz-a0U">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="AZK-r8-T22"/>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="Fzt-Lh-XNA">
                             <color key="tintColor" red="1" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
@@ -96,10 +123,10 @@
             </objects>
             <point key="canvasLocation" x="1237.5" y="390.75"/>
         </scene>
-        <!--Project View Controller-->
+        <!--Project View Controller - Project-->
         <scene sceneID="0B6-SH-0Bw">
             <objects>
-                <viewController id="RTx-bF-qUv" customClass="ProjectViewController" customModule="KnittingProjects" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Project" id="RTx-bF-qUv" customClass="ProjectViewController" customModule="KnittingProjects" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="qAL-on-z6b"/>
                         <viewControllerLayoutGuide type="bottom" id="asd-aF-d8q"/>
@@ -112,7 +139,7 @@
                                 <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="61"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
                                     <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="31"/>
@@ -121,10 +148,10 @@
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="5Z0-dY-NJU">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
-                                <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" keyboardType="alphabet" keyboardAppearance="light" returnKeyType="done"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" keyboardAppearance="light" returnKeyType="done"/>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="20" y="179" width="280" height="142"/>
                                 </variation>
@@ -135,21 +162,21 @@
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hGU-Ps-KCf">
                                 <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
                                     <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="95"/>
-                                    <rect key="frame" x="20" y="358" width="280" height="82"/>
+                                    <rect key="frame" x="20" y="329" width="280" height="82"/>
                                 </variation>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uTa-XC-Vuv">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <state key="normal" title="+">
-                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
                                     <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="55"/>
-                                    <rect key="frame" x="121" y="441" width="78" height="51"/>
+                                    <rect key="frame" x="121" y="419" width="78" height="51"/>
                                 </variation>
                                 <connections>
                                     <action selector="increaseCounterPressed:" destination="RTx-bF-qUv" eventType="touchUpInside" id="uCV-TH-kAb"/>
@@ -158,11 +185,11 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="acg-GS-Toc">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <state key="normal" title="-">
-                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
                                     <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="55"/>
-                                    <rect key="frame" x="121" y="500" width="78" height="51"/>
+                                    <rect key="frame" x="121" y="478" width="78" height="51"/>
                                 </variation>
                                 <connections>
                                     <action selector="decreaseCounterPressed:" destination="RTx-bF-qUv" eventType="touchUpInside" id="LTG-cY-eW9"/>
@@ -177,8 +204,21 @@
                                     <rect key="frame" x="20" y="150" width="280" height="21"/>
                                 </variation>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aeF-1E-u07">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="Reset">
+                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="20" y="537" width="280" height="30"/>
+                                </variation>
+                                <connections>
+                                    <action selector="resetCounterPressed:" destination="RTx-bF-qUv" eventType="touchUpInside" id="0DF-SW-X7a"/>
+                                </connections>
+                            </button>
                         </subviews>
-                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                         <variation key="default">
                             <mask key="subviews">
@@ -188,6 +228,7 @@
                                 <exclude reference="uTa-XC-Vuv"/>
                                 <exclude reference="acg-GS-Toc"/>
                                 <exclude reference="QVc-ak-eTe"/>
+                                <exclude reference="aeF-1E-u07"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
@@ -198,11 +239,12 @@
                                 <include reference="uTa-XC-Vuv"/>
                                 <include reference="acg-GS-Toc"/>
                                 <include reference="QVc-ak-eTe"/>
+                                <include reference="aeF-1E-u07"/>
                             </mask>
                         </variation>
                     </view>
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" id="Nkt-rB-AJK"/>
+                    <navigationItem key="navigationItem" title="Project" id="Nkt-rB-AJK"/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="counterLabel" destination="hGU-Ps-KCf" id="1gL-D5-3cF"/>
@@ -212,7 +254,26 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="m0f-fV-nwc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2598" y="392.25"/>
+            <point key="canvasLocation" x="1782" y="390.75"/>
+        </scene>
+        <!--Yarn Conversion View Controller - Yarn Conversion-->
+        <scene sceneID="Rfr-Xk-YHA">
+            <objects>
+                <viewController title="Yarn Conversion" id="TjQ-ci-He7" customClass="YarnConversionViewController" customModule="KnittingProjects" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Bty-Tx-c0i"/>
+                        <viewControllerLayoutGuide type="bottom" id="Lgw-Gj-dZT"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="hbW-HT-Gkk">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Wool Conversion" id="fkG-DA-QEX"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Koa-pU-wyQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2035.5" y="-160.5"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="dNf-la-wGt">
@@ -231,6 +292,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vRE-cT-lvS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="601.5" y="392.25"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="ST6-Nj-Uwm">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="GXy-Pi-nGK" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="FnN-PY-RBh">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="TjQ-ci-He7" kind="relationship" relationship="rootViewController" id="QTq-Oc-RUI"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="z4e-dd-PIK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1237.5" y="-160.5"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>

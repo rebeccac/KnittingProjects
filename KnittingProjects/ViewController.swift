@@ -16,9 +16,8 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     @IBOutlet var tableView: UITableView
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView.backgroundColor = UIColor(red: 19.0/255.0, green: 100.0/255.0, blue: 128.0/255.0, alpha: 1.0)
-        
-        
+        //tableView.backgroundColor = UIColor(red: 19.0/255.0, green: 100.0/255.0, blue: 128.0/255.0, alpha: 1.0)
+        tableView.backgroundColor = UIColor.whiteColor()
     }
     
     override func viewDidAppear(animated: Bool) {
@@ -95,6 +94,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         
         //cell.backgroundColor = UIColor.darkGrayColor()
         cell.textColor = UIColor.whiteColor()
+        
         
         
         if let ip = indexPath {
