@@ -1,11 +1,18 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="6172.15" systemVersion="13D65" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
-    <entity name="Projects" representedClassName="Model" syncable="YES">
+    <entity name="Counters" representedClassName="CounterModel" syncable="YES">
         <attribute name="counter" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="notes" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
+    <entity name="Projects" representedClassName="Model" syncable="YES">
+        <attribute name="counterOne" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="counterTwo" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="notes" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
     <elements>
-        <element name="Projects" positionX="-63" positionY="-18" width="128" height="90"/>
+        <element name="Projects" positionX="-63" positionY="-18" width="128" height="105"/>
+        <element name="Counters" positionX="-63" positionY="9" width="128" height="88"/>
     </elements>
 </model>

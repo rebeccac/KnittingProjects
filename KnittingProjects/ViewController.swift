@@ -49,12 +49,19 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             PVC.name = selectedItem.valueForKey("name") as String
             PVC.notes = selectedItem.valueForKey("notes") as String
             // get int value from DB - if object is nil, set to 0, else cast to Int
-            var count : AnyObject! = selectedItem.valueForKey("counter")
-            if count == nil {
-                PVC.counter = 0
+            var count1 : AnyObject! = selectedItem.valueForKey("counterOne")
+            if count1 == nil {
+                PVC.counterOne = 0
             }
             else {
-                PVC.counter = count as Int
+                PVC.counterOne = count1 as Int
+            }
+            
+            var count2: AnyObject! = selectedItem.valueForKey("counterTwo")
+            if count2 == nil {
+                PVC.counterTwo = 0
+            } else {
+                PVC.counterTwo = count2 as Int
             }
             // register existing item to NSManagedObject existingItem variable in ProjectViewController
             // tells ProjectViewController which item is being modified in DB

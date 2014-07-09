@@ -16,13 +16,14 @@ class ProjectViewController: UIViewController {
     
     var name: String = ""
     var notes: String = ""
-    var counter: Int = 0
+    var counterOne: Int = 0
+    var counterTwo: Int = 0
     var existingItem: NSManagedObject!
     
     @IBOutlet var projectNameLabel: UILabel
     @IBOutlet var notesTextField: UITextView
-    @IBOutlet var counterLabel: UILabel
-    
+    @IBOutlet var counterOneLabel: UILabel
+    @IBOutlet var counterTwoLabel: UILabel
     
     func getContext()->NSManagedObjectContext {
         // Reference to our app delegate
@@ -55,7 +56,8 @@ class ProjectViewController: UIViewController {
             // Map properties
             newItem.name = projectNameLabel.text
             newItem.notes = ""
-            newItem.counter = 0
+            newItem.counterOne = 0
+            newItem.counterTwo = 0
             
             // save newItem to existingItem var
             existingItem = newItem
@@ -68,47 +70,94 @@ class ProjectViewController: UIViewController {
     }
     
     
-    @IBAction func increaseCounterPressed(sender: AnyObject) {
-        counter++
-        counterLabel.text = "\(counter)"
+    @IBAction func increaseCounterOnePressed(sender: AnyObject) {
+        counterOne++
+        counterOneLabel.text = "\(counterOne)"
         
         let context = getContext()
         let entity = getEntity(context)
         
         // save counter's value to DB
         if existingItem {
-            existingItem.setValue(counter as Int, forKey: "counter")
+            existingItem.setValue(counterOne as Int, forKey: "counterOne")
+            context.save(nil)
         }
-
     }
     
-    @IBAction func decreaseCounterPressed(sender: AnyObject) {
-        if counter > 0 {
-            counter--
-            counterLabel.text = "\(counter)"
+    @IBAction func increaseCounterTwoPressed(sender: AnyObject) {
+        counterTwo++
+        counterTwoLabel.text = "\(counterTwo)"
+        
+        let context = getContext()
+        let entity = getEntity(context)
+        
+        // save counter's value to DB
+        if existingItem {
+            existingItem.setValue(counterTwo as Int, forKey: "counterTwo")
+            context.save(nil)
+        }
+    }
+    
+    @IBAction func decreaseCounterOnePressed(sender: AnyObject) {
+        if counterOne > 0 {
+            counterOne--
+            counterOneLabel.text = "\(counterOne)"
             
             let context = getContext()
             let entity = getEntity(context)
             
             // save counter's value to DB
             if existingItem {
-                existingItem.setValue(counter as Int, forKey: "counter")
+                existingItem.setValue(counterOne as Int, forKey: "counterOne")
+                context.save(nil)
+            }
+        }
+    }
+    
+    @IBAction func decreaseCounterTwoPressed(sender: AnyObject) {
+        if counterTwo > 0 {
+            counterTwo--
+            counterTwoLabel.text = "\(counterTwo)"
+            
+            let context = getContext()
+            let entity = getEntity(context)
+            
+            // save counter's value to DB
+            if existingItem {
+                existingItem.setValue(counterTwo as Int, forKey: "counterTwo")
+                context.save(nil)
             }
         }
     }
    
-    @IBAction func resetCounterPressed(sender: AnyObject) {
-        counter = 0
-        counterLabel.text = "\(counter)"
+    @IBAction func resetCounterOnePressed(sender: AnyObject) {
+        counterOne = 0
+        counterOneLabel.text = "\(counterOne)"
         let context = getContext()
         let entity = getEntity(context)
         
         // save counter's value to DB
         if existingItem {
-            existingItem.setValue(counter as Int, forKey: "counter")
+            existingItem.setValue(counterOne as Int, forKey: "counterOne")
+            context.save(nil)
         }
         
     }
+    
+    @IBAction func resetCounterTwoPressed(sender: AnyObject) {
+        counterTwo = 0
+        counterTwoLabel.text = "\(counterTwo)"
+        let context = getContext()
+        let entity = getEntity(context)
+        
+        // save counter's value to DB
+        if existingItem {
+            existingItem.setValue(counterTwo as Int, forKey: "counterTwo")
+            context.save(nil)
+        }
+        
+    }
+    
     func textView(_textView: UITextView!, shouldChangeTextInRange range: NSRange, replacementText text: String!) -> Bool {
             
             // If Return (Done) key is pressed, resign keyboard & save notes
@@ -121,13 +170,16 @@ class ProjectViewController: UIViewController {
                 // save notes to DB
                 if existingItem {
                     existingItem.setValue(notesTextField.text as String, forKey: "notes")
+                    context.save(nil)
                 }
                 
             }
             return true
     }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         // Set UITextView's border
         notesTextField.layer.borderColor = UIColor.lightGrayColor().CGColor
         notesTextField.layer.borderWidth = 1.0
@@ -135,7 +187,8 @@ class ProjectViewController: UIViewController {
         if existingItem {
             projectNameLabel.text = name
             notesTextField.text = notes
-            counterLabel.text = "\(counter)"
+            counterOneLabel.text = "\(counterOne)"
+            counterTwoLabel.text = "\(counterTwo)"
         } else {
             // If creating a new project, display UIAlertView
             alert.delegate = self
@@ -154,16 +207,4 @@ class ProjectViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-
-    /*
-    // #pragma mark - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue?, sender: AnyObject?) {
-        // Get the new view controller using [segue destinationViewController].
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

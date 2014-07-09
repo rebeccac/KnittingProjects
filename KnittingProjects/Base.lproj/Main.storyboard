@@ -63,7 +63,7 @@
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yEZ-su-YgP">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <state key="normal" title="Yarn Conversion">
+                                <state key="normal" title="Wool Weight Conversion">
                                     <color key="titleColor" red="0.46251890400000001" green="0.47401984800000002" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -72,6 +72,19 @@
                                 </variation>
                                 <connections>
                                     <segue destination="GXy-Pi-nGK" kind="show" identifier="showyarnconversion" id="Abc-bd-nBG"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E8l-YR-mQf">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="Needle Conversion">
+                                    <color key="titleColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="20" y="171" width="280" height="30"/>
+                                </variation>
+                                <connections>
+                                    <segue destination="src-3b-yZF" kind="show" identifier="showneedleconversion" id="tAb-Xq-CK4"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -86,10 +99,11 @@
                                 <exclude reference="cyP-jo-pax"/>
                                 <exclude reference="X1a-eD-Ufb"/>
                                 <exclude reference="yEZ-su-YgP"/>
+                                <exclude reference="E8l-YR-mQf"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="Zyj-M5-6lV"/>
                                 <exclude reference="bvZ-pk-a1b"/>
+                                <exclude reference="Zyj-M5-6lV"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
@@ -97,12 +111,13 @@
                                 <include reference="cyP-jo-pax"/>
                                 <include reference="X1a-eD-Ufb"/>
                                 <include reference="yEZ-su-YgP"/>
+                                <include reference="E8l-YR-mQf"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
                             <mask key="constraints">
-                                <include reference="Zyj-M5-6lV"/>
                                 <include reference="bvZ-pk-a1b"/>
+                                <include reference="Zyj-M5-6lV"/>
                             </mask>
                         </variation>
                     </view>
@@ -148,12 +163,12 @@
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="5Z0-dY-NJU">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences" keyboardAppearance="light" returnKeyType="done"/>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="20" y="179" width="280" height="142"/>
+                                    <rect key="frame" x="20" y="154" width="280" height="142"/>
                                 </variation>
                                 <connections>
                                     <outlet property="delegate" destination="RTx-bF-qUv" id="dNZ-5p-4n7"/>
@@ -165,43 +180,43 @@
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="95"/>
-                                    <rect key="frame" x="20" y="329" width="280" height="82"/>
+                                    <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="75"/>
+                                    <rect key="frame" x="71" y="310" width="179" height="73"/>
                                 </variation>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uTa-XC-Vuv">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <state key="normal" title="+">
-                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="55"/>
-                                    <rect key="frame" x="121" y="419" width="78" height="51"/>
+                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="55"/>
+                                    <rect key="frame" x="242" y="321" width="78" height="51"/>
                                 </variation>
                                 <connections>
-                                    <action selector="increaseCounterPressed:" destination="RTx-bF-qUv" eventType="touchUpInside" id="uCV-TH-kAb"/>
+                                    <action selector="increaseCounterOnePressed:" destination="RTx-bF-qUv" eventType="touchUpInside" id="hSC-HJ-gMi"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="acg-GS-Toc">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <state key="normal" title="-">
-                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="55"/>
-                                    <rect key="frame" x="121" y="478" width="78" height="51"/>
+                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="55"/>
+                                    <rect key="frame" x="0.0" y="321" width="78" height="51"/>
                                 </variation>
                                 <connections>
-                                    <action selector="decreaseCounterPressed:" destination="RTx-bF-qUv" eventType="touchUpInside" id="LTG-cY-eW9"/>
+                                    <action selector="decreaseCounterOnePressed:" destination="RTx-bF-qUv" eventType="touchUpInside" id="XUo-Fo-Tpo"/>
                                 </connections>
                             </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Notes" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QVc-ak-eTe">
                                 <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="20" y="150" width="280" height="21"/>
+                                    <rect key="frame" x="20" y="136" width="280" height="21"/>
                                 </variation>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aeF-1E-u07">
@@ -211,10 +226,59 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="20" y="537" width="280" height="30"/>
+                                    <rect key="frame" x="20" y="396" width="280" height="30"/>
                                 </variation>
                                 <connections>
-                                    <action selector="resetCounterPressed:" destination="RTx-bF-qUv" eventType="touchUpInside" id="0DF-SW-X7a"/>
+                                    <action selector="resetCounterOnePressed:" destination="RTx-bF-qUv" eventType="touchUpInside" id="rKE-yl-PE6"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zzs-5j-9sH">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="75"/>
+                                    <rect key="frame" x="71" y="422" width="179" height="82"/>
+                                </variation>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YA3-A4-jBI">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="+">
+                                    <color key="titleColor" red="0.074509803920000006" green="0.3921568627" blue="0.50196078430000002" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="55"/>
+                                    <rect key="frame" x="242" y="437" width="78" height="51"/>
+                                </variation>
+                                <connections>
+                                    <action selector="increaseCounterTwoPressed:" destination="RTx-bF-qUv" eventType="touchUpInside" id="PfG-9J-sO8"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D6N-Cl-VWv">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="-">
+                                    <color key="titleColor" red="0.074509803920000006" green="0.3921568627" blue="0.50196078430000002" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="55"/>
+                                    <rect key="frame" x="0.0" y="437" width="78" height="51"/>
+                                </variation>
+                                <connections>
+                                    <action selector="decreaseCounterTwoPressed:" destination="RTx-bF-qUv" eventType="touchUpInside" id="Dvq-Hm-fq8"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eup-Dy-jc8">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="Reset">
+                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="20" y="512" width="280" height="30"/>
+                                </variation>
+                                <connections>
+                                    <action selector="resetCounterTwoPressed:" destination="RTx-bF-qUv" eventType="touchUpInside" id="9cP-r0-q4q"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -229,6 +293,10 @@
                                 <exclude reference="acg-GS-Toc"/>
                                 <exclude reference="QVc-ak-eTe"/>
                                 <exclude reference="aeF-1E-u07"/>
+                                <exclude reference="zzs-5j-9sH"/>
+                                <exclude reference="YA3-A4-jBI"/>
+                                <exclude reference="D6N-Cl-VWv"/>
+                                <exclude reference="eup-Dy-jc8"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
@@ -240,6 +308,10 @@
                                 <include reference="acg-GS-Toc"/>
                                 <include reference="QVc-ak-eTe"/>
                                 <include reference="aeF-1E-u07"/>
+                                <include reference="zzs-5j-9sH"/>
+                                <include reference="YA3-A4-jBI"/>
+                                <include reference="D6N-Cl-VWv"/>
+                                <include reference="eup-Dy-jc8"/>
                             </mask>
                         </variation>
                     </view>
@@ -247,7 +319,8 @@
                     <navigationItem key="navigationItem" title="Project" id="Nkt-rB-AJK"/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="counterLabel" destination="hGU-Ps-KCf" id="1gL-D5-3cF"/>
+                        <outlet property="counterOneLabel" destination="hGU-Ps-KCf" id="JkS-o0-41q"/>
+                        <outlet property="counterTwoLabel" destination="zzs-5j-9sH" id="gcF-vo-oqa"/>
                         <outlet property="notesTextField" destination="5Z0-dY-NJU" id="8Rh-3N-bAP"/>
                         <outlet property="projectNameLabel" destination="Tzk-OK-75r" id="1jK-N3-9j1"/>
                     </connections>
@@ -265,15 +338,37 @@
                         <viewControllerLayoutGuide type="bottom" id="Lgw-Gj-dZT"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="hbW-HT-Gkk">
+                        <rect key="frame" x="0.0" y="0.0" width="480" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wool Weights" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0z6-3j-lfv">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="20" y="83" width="280" height="21"/>
+                                </variation>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="0z6-3j-lfv"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="0z6-3j-lfv"/>
+                            </mask>
+                        </variation>
                     </view>
                     <navigationItem key="navigationItem" title="Wool Conversion" id="fkG-DA-QEX"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Koa-pU-wyQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2035.5" y="-160.5"/>
+            <point key="canvasLocation" x="2575.5" y="-160.5"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="dNf-la-wGt">
@@ -293,6 +388,47 @@
             </objects>
             <point key="canvasLocation" x="601.5" y="392.25"/>
         </scene>
+        <!--Needle Conversion View Controller - Needle Conversion-->
+        <scene sceneID="IFg-7M-91z">
+            <objects>
+                <viewController title="Needle Conversion" id="src-3b-yZF" customClass="NeedleConversionViewController" customModule="KnittingProjects" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="dCj-vW-60h"/>
+                        <viewControllerLayoutGuide type="bottom" id="hhq-s6-kzg"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="79X-N8-Ywn">
+                        <rect key="frame" x="0.0" y="0.0" width="480" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Needle Sizes" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="plU-0o-u6Z">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="20" y="80" width="280" height="21"/>
+                                </variation>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="plU-0o-u6Z"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="plU-0o-u6Z"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <navigationItem key="navigationItem" title="Needle Conversion" id="jd5-Jv-B2J"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FdW-qB-zrb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1399.5" y="-160.5"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="ST6-Nj-Uwm">
             <objects>
@@ -309,10 +445,29 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="z4e-dd-PIK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1237.5" y="-160.5"/>
+            <point key="canvasLocation" x="2035.5" y="-160.5"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="tIv-j5-N4f">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="OU2-bV-xxl" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="nlA-Cf-vSe">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="src-3b-yZF" kind="relationship" relationship="rootViewController" id="tnf-t4-YBD"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DYE-vz-7lj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="864" y="-160.5"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+        <segue reference="tAb-Xq-CK4"/>
         <segue reference="b0X-09-luv"/>
     </inferredMetricsTieBreakers>
 </document>

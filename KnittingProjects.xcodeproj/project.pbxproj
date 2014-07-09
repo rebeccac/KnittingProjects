@@ -15,6 +15,8 @@
 		A1505348196A2CC500BEC759 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A1505347196A2CC500BEC759 /* Images.xcassets */; };
 		A1505354196A2CC500BEC759 /* KnittingProjectsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1505353196A2CC500BEC759 /* KnittingProjectsTests.swift */; };
 		A150535E196A2D5100BEC759 /* ProjectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A150535D196A2D5100BEC759 /* ProjectViewController.swift */; };
+		A194E9E6196D2F1D0095F2F5 /* NeedleConversionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A194E9E5196D2F1D0095F2F5 /* NeedleConversionViewController.swift */; };
+		A194E9E8196D5CDB0095F2F5 /* CounterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A194E9E7196D5CDB0095F2F5 /* CounterModel.swift */; };
 		A19BC925196A678800DC1F8E /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = A19BC924196A678800DC1F8E /* Model.swift */; };
 /* End PBXBuildFile section */
 
@@ -41,6 +43,9 @@
 		A1505352196A2CC500BEC759 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A1505353196A2CC500BEC759 /* KnittingProjectsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KnittingProjectsTests.swift; sourceTree = "<group>"; };
 		A150535D196A2D5100BEC759 /* ProjectViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectViewController.swift; sourceTree = "<group>"; };
+		A194E9E5196D2F1D0095F2F5 /* NeedleConversionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NeedleConversionViewController.swift; sourceTree = "<group>"; };
+		A194E9E7196D5CDB0095F2F5 /* CounterModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CounterModel.swift; sourceTree = "<group>"; };
+		A194E9E9196D5E340095F2F5 /* KnittingProjects 2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "KnittingProjects 2.xcdatamodel"; sourceTree = "<group>"; };
 		A19BC924196A678800DC1F8E /* Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -87,11 +92,13 @@
 				A1505342196A2CC500BEC759 /* ViewController.swift */,
 				A150535D196A2D5100BEC759 /* ProjectViewController.swift */,
 				A10D4F81196BADCC00CCAB2F /* YarnConversionViewController.swift */,
+				A194E9E5196D2F1D0095F2F5 /* NeedleConversionViewController.swift */,
 				A1505344196A2CC500BEC759 /* Main.storyboard */,
 				A1505347196A2CC500BEC759 /* Images.xcassets */,
 				A150533F196A2CC500BEC759 /* KnittingProjects.xcdatamodeld */,
 				A150533B196A2CC500BEC759 /* Supporting Files */,
 				A19BC924196A678800DC1F8E /* Model.swift */,
+				A194E9E7196D5CDB0095F2F5 /* CounterModel.swift */,
 			);
 			path = KnittingProjects;
 			sourceTree = "<group>";
@@ -226,6 +233,8 @@
 				A1505343196A2CC500BEC759 /* ViewController.swift in Sources */,
 				A150533E196A2CC500BEC759 /* AppDelegate.swift in Sources */,
 				A1505341196A2CC500BEC759 /* KnittingProjects.xcdatamodeld in Sources */,
+				A194E9E8196D5CDB0095F2F5 /* CounterModel.swift in Sources */,
+				A194E9E6196D2F1D0095F2F5 /* NeedleConversionViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -432,9 +441,10 @@
 		A150533F196A2CC500BEC759 /* KnittingProjects.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
+				A194E9E9196D5E340095F2F5 /* KnittingProjects 2.xcdatamodel */,
 				A1505340196A2CC500BEC759 /* KnittingProjects.xcdatamodel */,
 			);
-			currentVersion = A1505340196A2CC500BEC759 /* KnittingProjects.xcdatamodel */;
+			currentVersion = A194E9E9196D5E340095F2F5 /* KnittingProjects 2.xcdatamodel */;
 			path = KnittingProjects.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
